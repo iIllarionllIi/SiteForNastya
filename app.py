@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, session, g, redirect, url_for
 from flask_babel import Babel
 from functools import wraps
 from werkzeug.security import check_password_hash, generate_password_hash
-from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
 
@@ -13,16 +12,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key-here'
 app.config['BABEL_DEFAULT_LOCALE'] = 'ru'
 
-# Конфигурация для отправки email
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'lillarionllil@gmail.com'
-app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')  # Пароль нужно будет установить через переменную окружения
-app.config['MAIL_DEFAULT_SENDER'] = 'lillarionllil@gmail.com'
-
 babel = Babel(app)
-mail = Mail(app)
 
 # Поддерживаемые языки
 LANGUAGES = {
@@ -64,34 +54,8 @@ def services():
 @app.route('/contacts', methods=['GET', 'POST'])
 def contacts():
     if request.method == 'POST':
-        name = request.form.get('name')
-        email = request.form.get('email')
-        message_text = request.form.get('message')
-        
-        try:
-            # Создаем сообщение
-            msg = Message(
-                subject=f'Новое сообщение от {name}',
-                recipients=['lillarionllil@gmail.com'],
-                body=f'''
-                Новое сообщение с сайта:
-                
-                От: {name}
-                Email: {email}
-                
-                Сообщение:
-                {message_text}
-                '''
-            )
-            # Отправляем email
-            mail.send(msg)
-            flash('Спасибо! Ваше сообщение успешно отправлено.', 'success')
-        except Exception as e:
-            flash('Извините, произошла ошибка при отправке сообщения. Пожалуйста, попробуйте позже.', 'error')
-            print(f"Error sending email: {e}")
-        
+        flash('Спасибо за ваше сообщение! В данный момент форма находится в разработке.', 'info')
         return redirect(url_for('contacts'))
-    
     return render_template('contacts.html')
 
 @app.route('/set_language/<language>')
