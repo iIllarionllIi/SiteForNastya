@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Услуги') }}{% endblock %}
+
+{% block content %}
+<div class="services-page">
+    <div class="services-header">
+        <h1>{{ _('Ваш путь к здоровому питанию') }}</h1>
+        <p class="services-subtitle">{{ _('Выберите программу, которая подходит именно вам') }}</p>
+    </div>
+    
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-badge">{{ _('Популярный выбор') }}</div>
+            <h2>{{ _('Персональная консультация') }}</h2>
+            <div class="service-price">
+                <span class="price-amount">5000 ₽</span>
+                <span class="price-period">{{ _('за консультацию') }}</span>
+            </div>
+            <div class="service-description">
+                {{ _('Идеально подходит для тех, кто хочет разобраться в своем питании и получить профессиональные рекомендации.') }}
+            </div>
+            <div class="service-features">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Детальный анализ текущего рациона') }}</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Оценка состояния здоровья') }}</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Разработка персональных рекомендаций') }}</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Ответы на все вопросы') }}</span>
+                </div>
+            </div>
+            <a href="https://calendly.com/v-nutri-science/60min" target="_blank" class="cta-button">
+                <span>{{ _('Записаться на консультацию') }}</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="service-card featured">
+            <div class="service-badge">{{ _('Лучшее предложение') }}</div>
+            <h2>{{ _('Составление плана питания') }}</h2>
+            <div class="service-price">
+                <span class="price-amount">8000 ₽</span>
+                <span class="price-period">{{ _('за план на 2 недели') }}</span>
+            </div>
+            <div class="service-description">
+                {{ _('Полноценный план питания, разработанный специально под ваши цели, вкусы и образ жизни.') }}
+            </div>
+            <div class="service-features">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Персональное меню на 2 недели') }}</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Список продуктов и рецепты') }}</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Рекомендации по приему пищи') }}</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Корректировка плана') }}</span>
+                </div>
+                <div class="feature-item highlight">
+                    <i class="fas fa-star"></i>
+                    <span>{{ _('Бонус: Гид по здоровым перекусам') }}</span>
+                </div>
+            </div>
+            <a href="https://calendly.com/v-nutri-science/60min" target="_blank" class="cta-button primary">
+                <span>{{ _('Получить персональный план') }}</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="service-card">
+            <div class="service-badge">{{ _('Максимальный результат') }}</div>
+            <h2>{{ _('Программа сопровождения') }}</h2>
+            <div class="service-price">
+                <span class="price-amount">15000 ₽</span>
+                <span class="price-period">{{ _('в месяц') }}</span>
+            </div>
+            <div class="service-description">
+                {{ _('Полное сопровождение на пути к вашей цели с постоянной поддержкой и корректировкой программы.') }}
+            </div>
+            <div class="service-features">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Персональный план питания') }}</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Еженедельные консультации') }}</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Поддержка в чате') }}</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ _('Корректировка программы') }}</span>
+                </div>
+                <div class="feature-item highlight">
+                    <i class="fas fa-star"></i>
+                    <span>{{ _('Бонус: Дневник питания и трекер прогресса') }}</span>
+                </div>
+            </div>
+            <a href="https://calendly.com/v-nutri-science/60min" target="_blank" class="cta-button">
+                <span>{{ _('Начать программу') }}</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="services-faq">
+        <h2>{{ _('Часто задаваемые вопросы') }}</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>{{ _('Как проходят онлайн-консультации?') }}</h3>
+                <p>{{ _('Консультации проводятся через Zoom или WhatsApp. Перед встречей вы получите анкету для заполнения, чтобы наша работа была максимально эффективной.') }}</p>
+            </div>
+            <div class="faq-item">
+                <h3>{{ _('Сколько времени длится консультация?') }}</h3>
+                <p>{{ _('Первая консультация длится 60 минут, последующие - 30-45 минут. Этого времени достаточно для детального обсуждения всех вопросов.') }}</p>
+            </div>
+            <div class="faq-item">
+                <h3>{{ _('Как происходит оплата?') }}</h3>
+                <p>{{ _('Оплата производится онлайн после записи на консультацию. Вы получите все необходимые инструкции на email.') }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-cta">
+        <h2>{{ _('Остались вопросы?') }}</h2>
+        <p>{{ _('Напишите мне, и я помогу выбрать программу, которая подойдет именно вам') }}</p>
+        <a href="{{ url_for('contacts') }}" class="cta-button secondary">{{ _('Связаться со мной') }}</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,268 @@
+# English translations for SiteForNastya.
+# Copyright (C) 2024 Anastasia Dorofeeva
+# This file is distributed under the same license as the SiteForNastya project.
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-12-28 19:12+0300\n"
+"PO-Revision-Date: 2024-12-28 19:12+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+# Navigation
+msgid "Главная"
+msgstr "Home"
+
+msgid "Обо мне"
+msgstr "About Me"
+
+msgid "Услуги"
+msgstr "Services"
+
+msgid "Контакты"
+msgstr "Contacts"
+
+msgid "Записаться"
+msgstr "Book Now"
+
+msgid "Навигация"
+msgstr "Navigation"
+
+# Home page
+msgid "Анастасия Дорофеева"
+msgstr "Anastasia Dorofeeva"
+
+msgid "Нутрициолог | Специалист по здоровому питанию"
+msgstr "Nutritionist | Healthy Eating Specialist"
+
+msgid "Помогаю людям достичь их целей в области здоровья через правильное питание"
+msgstr "Helping people achieve their health goals through proper nutrition"
+
+msgid "Записаться на консультацию"
+msgstr "Book a Consultation"
+
+msgid "Ваш путь к здоровому образу жизни начинается здесь"
+msgstr "Your journey to a healthy lifestyle starts here"
+
+msgid "Запишитесь сейчас"
+msgstr "Book Now"
+
+msgid "Сделайте первый шаг к здоровому образу жизни"
+msgstr "Take the first step towards a healthy lifestyle"
+
+# About page
+msgid "Привет! Я Анастасия"
+msgstr "Hi! I'm Anastasia"
+
+msgid "Я сертифицированный нутрициолог и специалист по здоровому питанию. Моя миссия — помогать людям достигать их целей в области здоровья через правильное и сбалансированное питание."
+msgstr "I am a certified nutritionist and healthy eating specialist. My mission is to help people achieve their health goals through proper and balanced nutrition."
+
+msgid "Мое образование"
+msgstr "My Education"
+
+msgid "Диплом нутрициолога, Институт Интегративного Питания (IIN)"
+msgstr "Nutritionist Diploma, Institute for Integrative Nutrition (IIN)"
+
+msgid "Сертификат специалиста по спортивному питанию"
+msgstr "Sports Nutrition Specialist Certificate"
+
+msgid "Постоянное повышение квалификации в области диетологии и нутрициологии"
+msgstr "Continuous professional development in dietetics and nutrition"
+
+msgid "Мой подход"
+msgstr "My Approach"
+
+msgid "Я верю в индивидуальный подход к каждому клиенту. Мы все уникальны, и то, что работает для одного человека, может не подойти другому. Поэтому я:"
+msgstr "I believe in an individual approach to each client. We are all unique, and what works for one person may not work for another. Therefore, I:"
+
+msgid "Тщательно изучаю историю здоровья и образ жизни каждого клиента"
+msgstr "Carefully study each client's health history and lifestyle"
+
+msgid "Разрабатываю персонализированные планы питания"
+msgstr "Develop personalized nutrition plans"
+
+msgid "Обеспечиваю постоянную поддержку на пути к целям"
+msgstr "Provide continuous support on the way to goals"
+
+msgid "Регулярно корректирую программу питания для достижения наилучших результатов"
+msgstr "Regularly adjust the nutrition program to achieve the best results"
+
+msgid "Как я могу помочь вам"
+msgstr "How I Can Help You"
+
+msgid "Я специализируюсь на:"
+msgstr "I specialize in:"
+
+msgid "Снижении веса и поддержании здоровой массы тела"
+msgstr "Weight loss and maintaining a healthy body weight"
+
+msgid "Улучшении пищевых привычек"
+msgstr "Improving eating habits"
+
+msgid "Составлении сбалансированных планов питания"
+msgstr "Creating balanced nutrition plans"
+
+msgid "Питании для спортсменов и активных людей"
+msgstr "Nutrition for athletes and active people"
+
+msgid "Консультировании по вопросам здорового образа жизни"
+msgstr "Consulting on healthy lifestyle issues"
+
+msgid "Готовы начать свой путь к здоровому образу жизни?"
+msgstr "Ready to start your journey to a healthy lifestyle?"
+
+msgid "Мои услуги"
+msgstr "My Services"
+
+msgid "Персональная консультация"
+msgstr "Personal Consultation"
+
+msgid "Индивидуальный подход к вашему питанию и образу жизни. Разработаем стратегию питания, которая подходит именно вам."
+msgstr "Individual approach to your nutrition and lifestyle. We will develop a nutrition strategy that suits you perfectly."
+
+msgid "Подробнее"
+msgstr "Learn More"
+
+msgid "Онлайн поддержка"
+msgstr "Online Support"
+
+msgid "Постоянное сопровождение и корректировка программы. Ответы на вопросы и помощь в достижении целей."
+msgstr "Continuous support and program adjustment. Answering questions and helping to achieve goals."
+
+msgid "лет опыта"
+msgstr "years of experience"
+
+msgid "довольных клиентов"
+msgstr "satisfied clients"
+
+msgid "профессиональных сертификата"
+msgstr "professional certificates"
+
+msgid "Узнать больше"
+msgstr "Learn More"
+
+# Services page
+msgid "Первичная консультация"
+msgstr "Initial Consultation"
+
+msgid "от"
+msgstr "from"
+
+msgid "Консультация включает:"
+msgstr "Consultation includes:"
+
+msgid "Анализ пищевых привычек"
+msgstr "Analysis of eating habits"
+
+msgid "Оценка состояния здоровья"
+msgstr "Health assessment"
+
+msgid "Разработка персональных рекомендаций"
+msgstr "Development of personal recommendations"
+
+msgid "Ответы на все вопросы"
+msgstr "Answers to all questions"
+
+msgid "Составление плана питания"
+msgstr "Nutrition Plan Development"
+
+msgid "План питания включает:"
+msgstr "Nutrition plan includes:"
+
+msgid "Персональное меню на 2 недели"
+msgstr "Personal menu for 2 weeks"
+
+msgid "Список продуктов и рецепты"
+msgstr "Shopping list and recipes"
+
+msgid "Рекомендации по приему пищи"
+msgstr "Meal timing recommendations"
+
+msgid "Корректировка плана"
+msgstr "Plan adjustments"
+
+msgid "Программа сопровождения"
+msgstr "Support Program"
+
+msgid "Программа включает:"
+msgstr "Program includes:"
+
+msgid "Персональный план питания"
+msgstr "Personal nutrition plan"
+
+msgid "Еженедельные консультации"
+msgstr "Weekly consultations"
+
+msgid "Поддержка в чате"
+msgstr "Chat support"
+
+msgid "Корректировка программы"
+msgstr "Program adjustments"
+
+# Contacts page
+msgid "Социальные сети"
+msgstr "Social Media"
+
+msgid "Отправить сообщение"
+msgstr "Send Message"
+
+msgid "Имя"
+msgstr "Name"
+
+msgid "Сообщение"
+msgstr "Message"
+
+msgid "Отправить"
+msgstr "Send"
+
+# Admin panel
+msgid "Админ-панель"
+msgstr "Admin Panel"
+
+msgid "Выйти"
+msgstr "Logout"
+
+msgid "Управление контентом"
+msgstr "Content Management"
+
+msgid "Текст"
+msgstr "Text"
+
+msgid "Сохранить"
+msgstr "Save"
+
+msgid "Название услуги"
+msgstr "Service Name"
+
+msgid "Цена"
+msgstr "Price"
+
+msgid "Описание"
+msgstr "Description"
+
+# Footer
+msgid "Все права защищены"
+msgstr "All rights reserved"
+
+# Flash messages
+msgid "Спасибо! Ваше сообщение успешно отправлено."
+msgstr "Thank you! Your message has been sent successfully."
+
+msgid "Извините, произошла ошибка при отправке сообщения. Пожалуйста, попробуйте позже."
+msgstr "Sorry, there was an error sending your message. Please try again later."
+
+msgid "Текст \"Обо мне\" успешно обновлен"
+msgstr "About Me text has been updated successfully"
+
+msgid "Услуги успешно обновлены"
+msgstr "Services have been updated successfully"
+
+msgid "Неверный пароль"
+msgstr "Invalid password"

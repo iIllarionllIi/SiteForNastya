@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{ g.lang_code }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - Nutritionist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    {% include 'floating_elements.html' %}
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="{{ url_for('index') }}">
+                        <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="V.nutri.science" class="logo-img">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('index') }}" class="nav-link">{{ _('Главная') }}</a></li>
+                        <li><a href="{{ url_for('about') }}" class="nav-link">{{ _('Обо мне') }}</a></li>
+                        <li><a href="{{ url_for('services') }}" class="nav-link">{{ _('Услуги') }}</a></li>
+                        <li><a href="{{ url_for('contacts') }}" class="nav-link">{{ _('Контакты') }}</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="appointment-wrapper">
+                        <div class="appointment-decoration"></div>
+                        <a href="https://calendly.com/v-nutri-science/60min" target="_blank" class="appointment-btn">
+                            <i class="fas fa-calendar-check"></i>
+                            {{ _('Записаться') }}
+                        </a>
+                    </div>
+                    <div class="language-switcher">
+                        <a href="{{ url_for('set_language', language='ru') }}" class="lang-link {% if g.lang_code == 'ru' %}active{% endif %}">RU</a>
+                        <span class="lang-separator">|</span>
+                        <a href="{{ url_for('set_language', language='en') }}" class="lang-link {% if g.lang_code == 'en' %}active{% endif %}">EN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-decoration">
+            <div class="decoration-leaf"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="V.nutri.science" class="footer-logo-img">
+                    </div>
+                    <p class="footer-description">{{ _('Ваш путь к здоровому образу жизни начинается здесь') }}</p>
+                </div>
+                <div class="footer-links">
+                    <h3>{{ _('Навигация') }}</h3>
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">{{ _('Главная') }}</a></li>
+                        <li><a href="{{ url_for('about') }}">{{ _('Обо мне') }}</a></li>
+                        <li><a href="{{ url_for('services') }}">{{ _('Услуги') }}</a></li>
+                        <li><a href="{{ url_for('contacts') }}">{{ _('Контакты') }}</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>{{ _('Контакты') }}</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@v-nutri.science</p>
+                        <p><i class="fab fa-telegram"></i> @v_nutri_science</p>
+                        <p><i class="fab fa-instagram"></i> @v.nutri.science</p>
+                    </div>
+                </div>
+                <div class="footer-cta">
+                    <h3>{{ _('Запишитесь сейчас') }}</h3>
+                    <p>{{ _('Сделайте первый шаг к здоровому образу жизни') }}</p>
+                    <a href="https://calendly.com/v-nutri-science/60min" target="_blank" class="footer-cta-button">
+                        {{ _('Записаться на консультацию') }}
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 V.nutri.science. {{ _('Все права защищены') }}</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

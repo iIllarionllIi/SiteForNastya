@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Главная') }}{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">{{ _('Анастасия Дорофеева') }}</h1>
+            <div class="hero-subtitle">{{ _('Нутрициолог | Специалист по здоровому питанию') }}</div>
+            <p class="hero-text">{{ _('Помогаю людям достичь их целей в области здоровья через правильное питание') }}</p>
+            <div class="hero-buttons">
+                <a href="https://calendly.com/v-nutri-science/60min" target="_blank" class="cta-button">
+                    <span>{{ _('Записаться на консультацию') }}</span>
+                    <svg class="button-arrow" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="services-preview">
+    <div class="container">
+        <h2 class="section-title">{{ _('Мои услуги') }}</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                </div>
+                <h3>{{ _('Персональная консультация') }}</h3>
+                <p>{{ _('Индивидуальный подход к вашему питанию и образу жизни. Разработаем стратегию питания, которая подходит именно вам.') }}</p>
+                <a href="{{ url_for('services') }}" class="card-link">{{ _('Подробнее') }} →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+                    </svg>
+                </div>
+                <h3>{{ _('Составление плана питания') }}</h3>
+                <p>{{ _('Разработка персонального плана питания с учетом ваших целей, предпочтений и образа жизни.') }}</p>
+                <a href="{{ url_for('services') }}" class="card-link">{{ _('Подробнее') }} →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                    </svg>
+                </div>
+                <h3>{{ _('Онлайн поддержка') }}</h3>
+                <p>{{ _('Постоянное сопровождение и корректировка программы. Ответы на вопросы и помощь в достижении целей.') }}</p>
+                <a href="{{ url_for('services') }}" class="card-link">{{ _('Подробнее') }} →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-preview">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Анастасия Дорофеева" class="profile-image">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">{{ _('Обо мне') }}</h2>
+                <p class="about-text">{{ _('Сертифицированный нутрициолог с опытом работы более 5 лет. Помогаю людям достичь их целей в области здоровья через правильное питание и образ жизни. Мой подход основан на научных данных и индивидуальных особенностях каждого клиента.') }}</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-number">5+</div>
+                        <div class="feature-text">{{ _('лет опыта') }}</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-number">100+</div>
+                        <div class="feature-text">{{ _('довольных клиентов') }}</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-number">3</div>
+                        <div class="feature-text">{{ _('профессиональных сертификата') }}</div>
+                    </div>
+                </div>
+                <a href="{{ url_for('about') }}" class="read-more-button">
+                    {{ _('Узнать больше') }}
+                    <svg class="button-arrow" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

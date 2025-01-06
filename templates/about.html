@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Обо мне') }}{% endblock %}
+
+{% block content %}
+<div class="about-hero">
+    <div class="container">
+        <div class="about-hero-content">
+            <div class="about-hero-text">
+                <h1>{{ _('Привет! Я Анастасия') }}</h1>
+                <p class="about-intro">{{ _('Я сертифицированный нутрициолог и специалист по здоровому питанию. Моя миссия — помогать людям достигать их целей в области здоровья через правильное и сбалансированное питание.') }}</p>
+            </div>
+            <div class="about-hero-image">
+                <img src="{{ url_for('static', filename='images/Копия Nastya-184.jpg') }}" alt="Анастасия Дорофеева">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="education-section">
+    <div class="container">
+        <h2>{{ _('Мое образование') }}</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>{{ _('Диплом нутрициолога, Институт Интегративного Питания (IIN)') }}</h3>
+                <p>2020</p>
+            </div>
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>{{ _('Сертификат специалиста по спортивному питанию') }}</h3>
+                <p>2021</p>
+            </div>
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <h3>{{ _('Постоянное повышение квалификации в области диетологии и нутрициологии') }}</h3>
+                <p>2020-2024</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="approach-section">
+    <div class="container">
+        <div class="approach-content">
+            <div class="approach-text">
+                <h2>{{ _('Мой подход') }}</h2>
+                <p>{{ _('Я верю в индивидуальный подход к каждому клиенту. Мы все уникальны, и то, что работает для одного человека, может не подойти другому. Поэтому я:') }}</p>
+                <ul class="approach-list">
+                    <li>{{ _('Тщательно изучаю историю здоровья и образ жизни каждого клиента') }}</li>
+                    <li>{{ _('Разрабатываю персонализированные планы питания') }}</li>
+                    <li>{{ _('Обеспечиваю постоянную поддержку на пути к целям') }}</li>
+                    <li>{{ _('Регулярно корректирую программу питания для достижения наилучших результатов') }}</li>
+                </ul>
+            </div>
+            <div class="approach-image">
+                <img src="{{ url_for('static', filename='images/approach.jpg') }}" alt="Мой подход">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="specialization-section">
+    <div class="container">
+        <h2>{{ _('Как я могу помочь вам') }}</h2>
+        <p class="specialization-intro">{{ _('Я специализируюсь на:') }}</p>
+        <div class="specialization-grid">
+            <div class="specialization-card">
+                <div class="specialization-icon">
+                    <i class="fas fa-weight"></i>
+                </div>
+                <h3>{{ _('Снижении веса и поддержании здоровой массы тела') }}</h3>
+            </div>
+            <div class="specialization-card">
+                <div class="specialization-icon">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <h3>{{ _('Улучшении пищевых привычек') }}</h3>
+            </div>
+            <div class="specialization-card">
+                <div class="specialization-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3>{{ _('Составлении сбалансированных планов питания') }}</h3>
+            </div>
+            <div class="specialization-card">
+                <div class="specialization-icon">
+                    <i class="fas fa-running"></i>
+                </div>
+                <h3>{{ _('Питании для спортсменов и активных людей') }}</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>{{ _('Готовы начать свой путь к здоровому образу жизни?') }}</h2>
+            <a href="https://calendly.com/v-nutri-science/60min" target="_blank" class="cta-button">
+                {{ _('Записаться на консультацию') }}
+                <svg class="button-arrow" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

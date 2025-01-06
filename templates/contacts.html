@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Контакты') }}{% endblock %}
+
+{% block content %}
+<div class="contacts-page">
+    <div class="contacts-header">
+        <h1>{{ _('Давайте начнем работу вместе') }}</h1>
+        <p class="contacts-subtitle">{{ _('Выберите удобный способ связи или заполните форму, и я отвечу вам в течение 24 часов') }}</p>
+    </div>
+    
+    <div class="contacts-content">
+        <div class="contact-info">
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>{{ _('Instagram') }}</h3>
+                        <p>{{ _('Подписывайтесь на мой блог о здоровом питании') }}</p>
+                        <a href="https://www.instagram.com/v.nutri.science/" target="_blank" class="social-link">
+                            @v.nutri.science
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>{{ _('Email') }}</h3>
+                        <p>{{ _('Напишите мне для консультации или сотрудничества') }}</p>
+                        <a href="mailto:lillarionllil@gmail.com" class="social-link">
+                            lillarionllil@gmail.com
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>WhatsApp</h3>
+                        <p>{{ _('Для быстрой связи и консультаций') }}</p>
+                        <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="social-link">
+                            {{ _('Написать в WhatsApp') }}
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-schedule">
+                <h3>{{ _('График работы') }}</h3>
+                <div class="schedule-item">
+                    <i class="far fa-clock"></i>
+                    <span>{{ _('Пн-Пт: 10:00 - 19:00') }}</span>
+                </div>
+                <div class="schedule-item">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>{{ _('Сб-Вс: По предварительной записи') }}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <div class="form-header">
+                <h2>{{ _('Отправить сообщение') }}</h2>
+                <p>{{ _('Заполните форму, и я свяжусь с вами в ближайшее время') }}</p>
+            </div>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <form action="{{ url_for('contacts') }}" method="POST">
+                <div class="form-group">
+                    <label for="name">{{ _('Ваше имя') }}</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" name="name" placeholder="{{ _('Как к вам обращаться?') }}" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="{{ _('Ваш email для связи') }}" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">{{ _('Телефон') }} ({{ _('необязательно') }})</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" name="phone" placeholder="{{ _('+7 (___) ___-__-__') }}">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">{{ _('Тема сообщения') }}</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-tag"></i>
+                        <select id="subject" name="subject" required>
+                            <option value="">{{ _('Выберите тему') }}</option>
+                            <option value="consultation">{{ _('Консультация') }}</option>
+                            <option value="meal_plan">{{ _('План питания') }}</option>
+                            <option value="program">{{ _('Программа сопровождения') }}</option>
+                            <option value="other">{{ _('Другое') }}</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">{{ _('Ваше сообщение') }}</label>
+                    <div class="input-with-icon textarea-icon">
+                        <i class="fas fa-comment"></i>
+                        <textarea id="message" name="message" placeholder="{{ _('Опишите ваш запрос или задайте вопрос') }}" required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <span>{{ _('Отправить сообщение') }}</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="contacts-faq">
+        <h2>{{ _('Часто задаваемые вопросы') }}</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>{{ _('Как быстро вы отвечаете на сообщения?') }}</h3>
+                <p>{{ _('Я стараюсь отвечать на все сообщения в течение 24 часов в рабочие дни.') }}</p>
+            </div>
+            <div class="faq-item">
+                <h3>{{ _('Можно ли записаться на консультацию онлайн?') }}</h3>
+                <p>{{ _('Да, вы можете записаться через форму на сайте или написать мне в WhatsApp.') }}</p>
+            </div>
+            <div class="faq-item">
+                <h3>{{ _('Проводите ли вы очные консультации?') }}</h3>
+                <p>{{ _('Да, я провожу как онлайн, так и очные консультации по предварительной записи.') }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
