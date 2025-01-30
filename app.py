@@ -108,4 +108,4 @@ def admin_update_services():
     return redirect(url_for('admin_dashboard'))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8007)
+    app.run(debug=True, port=8080)
