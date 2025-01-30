@@ -23,4 +23,4 @@ jobs:
         with:
           platforms: linux/amd64
           push: true
-          tags: vnutriscience/vnutriscience:latest
+          tags: illarionlli/vnutriscience:latest
