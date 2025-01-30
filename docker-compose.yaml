@@ -1,0 +1,45 @@
+version: "2"
+
+services:
+  swag:
+    image: lscr.io/linuxserver/swag
+    container_name: swag
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Moscow
+      - URL=shantaram-spb.ru
+      - SUBDOMAINS=www,
+      - EXTRA_DOMAINS=vnutriscience.com
+      - VALIDATION=http
+      - EMAIL=llillarionllill@gmail.com
+      - STAGING=1
+    volumes:
+      - ./swag-config:/config
+    ports:
+      - 443:443
+      - 80:80
+    restart: unless-stopped
+
+  vnutriscience:
+    image: 'illarionlli/vnutriscience:latest'
+    container_name: vnutriscience
+    hostname: vnutriscience
+    restart: always
+
+  shantaram:
+    image: 'rofleksey/shantaram:latest'
+    container_name: shantaram
+    hostname: shantaram
+    restart: always
+
+  shantaram-cms:
+    image: 'rofleksey/shantaram-cms:latest'
+    container_name: shantaram-cms
+    hostname: shantaram-cms
+    restart: always
+    volumes:
+      - ./data/:/opt/data:rw
+      - ./config.yaml:/opt/config.yaml
