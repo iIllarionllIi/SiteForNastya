@@ -7,8 +7,8 @@
     <div class="container">
         <div class="about-hero-content">
             <div class="about-hero-text">
-                <h1>{{ _('Привет! Я Анастасия') }}</h1>
-                <p class="about-intro">{{ _('Я сертифицированный нутрициолог и специалист по здоровому питанию. Моя миссия — помогать людям достигать их целей в области здоровья через правильное и сбалансированное питание.') }}</p>
+                <h1>{{ _('Привет! Я Настя') }}</h1>
+                <p class="about-intro">{{ _('Я нутрициолог, который поможет тебе разобраться с питанием без стресса и запретов.') }}</p>
             </div>
             <div class="about-hero-image">
                 <img src="{{ url_for('static', filename='images/Копия Nastya-184.jpg') }}" alt="Анастасия Дорофеева">
@@ -25,21 +25,21 @@
                 <div class="education-icon">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
-                <h3>{{ _('Диплом нутрициолога, Институт Интегративного Питания (IIN)') }}</h3>
+                <h3>{{ _('Магистерская степень нутрициолога общественного питания') }}</h3>
                 <p>2020</p>
             </div>
             <div class="education-card">
                 <div class="education-icon">
                     <i class="fas fa-certificate"></i>
                 </div>
-                <h3>{{ _('Сертификат специалиста по спортивному питанию') }}</h3>
+                <h3>{{ _('Член ассоцияации доказательных нутрициологов') }}</h3>
                 <p>2021</p>
             </div>
             <div class="education-card">
                 <div class="education-icon">
                     <i class="fas fa-book-reader"></i>
                 </div>
-                <h3>{{ _('Постоянное повышение квалификации в области диетологии и нутрициологии') }}</h3>
+                <h3>{{ _('Другие обучения') }}</h3>
                 <p>2020-2024</p>
             </div>
         </div>
@@ -51,11 +51,13 @@
         <div class="approach-content">
             <div class="approach-text">
                 <h2>{{ _('Мой подход') }}</h2>
-                <p>{{ _('Я верю в индивидуальный подход к каждому клиенту. Мы все уникальны, и то, что работает для одного человека, может не подойти другому. Поэтому я:') }}</p>
+                <p>{{ _('Я практикую индивидуальный подход к каждому клиенту. Мы все уникальны, и то, что работает для одного человека, может не подойти другому.
+Поэтому я:') }}</p>
                 <ul class="approach-list">
-                    <li>{{ _('Тщательно изучаю историю здоровья и образ жизни каждого клиента') }}</li>
-                    <li>{{ _('Разрабатываю персонализированные планы питания') }}</li>
-                    <li>{{ _('Обеспечиваю постоянную поддержку на пути к целям') }}</li>
+                    <li>{{ _('Тщательно изучаю образ жизни каждого клиента') }}</li>
+                    <li>{{ _('Учу каждого самостоятельно составлять персонализированный план питания') }}</li>
+                    <li>{{ _('Даю домашние задания для каждого шага') }}</li>
+                    <li>{{ _('Поддерживаю на пути к вашим целям') }}</li>
                     <li>{{ _('Регулярно корректирую программу питания для достижения наилучших результатов') }}</li>
                 </ul>
             </div>
@@ -69,7 +71,7 @@
 <section class="specialization-section">
     <div class="container">
         <h2>{{ _('Как я могу помочь вам') }}</h2>
-        <p class="specialization-intro">{{ _('Я специализируюсь на:') }}</p>
+        <!--<p class="specialization-intro">{{ _('Я специализируюсь на:') }}</p>-->
         <div class="specialization-grid">
             <div class="specialization-card">
                 <div class="specialization-icon">
@@ -79,21 +81,21 @@
             </div>
             <div class="specialization-card">
                 <div class="specialization-icon">
-                    <i class="fas fa-apple-alt"></i>
-                </div>
-                <h3>{{ _('Улучшении пищевых привычек') }}</h3>
-            </div>
-            <div class="specialization-card">
-                <div class="specialization-icon">
                     <i class="fas fa-clipboard-list"></i>
                 </div>
-                <h3>{{ _('Составлении сбалансированных планов питания') }}</h3>
+                <h3>{{ _('Набор массы для малоежек') }}</h3>
             </div>
             <div class="specialization-card">
                 <div class="specialization-icon">
                     <i class="fas fa-running"></i>
                 </div>
                 <h3>{{ _('Питании для спортсменов и активных людей') }}</h3>
+            </div>
+            <div class="specialization-card">
+                <div class="specialization-icon">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <h3>{{ _('Улучшении пищевых привычек') }}</h3>
             </div>
         </div>
     </div>
