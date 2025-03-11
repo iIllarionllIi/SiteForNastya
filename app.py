@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, g, redirect, url_for, flash
-from flask_babel import Babel
+from flask_babel import Babel, gettext as _
 from functools import wraps
 from werkzeug.security import check_password_hash, generate_password_hash
 from dotenv import load_dotenv
@@ -11,6 +11,7 @@ load_dotenv()
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key-here'
 app.config['BABEL_DEFAULT_LOCALE'] = 'ru'
+app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
 
 babel = Babel(app)
 
@@ -37,7 +38,12 @@ def get_locale():
         return session['lang_code']
     return request.accept_languages.best_match(LANGUAGES.keys())
 
-babel.init_app(app, locale_selector=get_locale)
+@app.before_request
+def before_request():
+    g.locale = str(get_locale())
+    g.lang_code = g.locale
+
+babel = Babel(app, locale_selector=get_locale)
 
 @app.route('/')
 def index():
@@ -60,8 +66,9 @@ def contacts():
 
 @app.route('/set_language/<language>')
 def set_language(language):
-    session['lang_code'] = language
-    return redirect(request.referrer or '/')
+    if language in LANGUAGES:
+        session['lang_code'] = language
+    return redirect(request.referrer or url_for('index'))
 
 # Админ-маршруты
 @app.route('/admin/login', methods=['GET', 'POST'])
